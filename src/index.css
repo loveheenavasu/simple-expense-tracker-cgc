@@ -1,0 +1,167 @@
+:root {
+  --expense: rgb(225, 46, 46);
+  --income: rgb(38, 186, 159);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.total-wrapper {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  background: rgb(210, 207, 207);
+}
+
+.total-wrapper > div.profit {
+  width: 100%;
+  text-align: center;
+  font-size: 32px;
+  letter-spacing: 2px;
+  color: white;
+}
+
+.total-transactions-wrapper {
+  display: flex;
+  gap: 56px;
+}
+
+.total-transactions-wrapper > div {
+  flex: 1;
+  text-align: center;
+  padding: 16px;
+  font-size: 18px;
+  color: whitesmoke;
+}
+
+.total-transactions-wrapper > div.expense {
+  background-color: var(--expense);
+}
+
+.total-transactions-wrapper > div.income {
+  background-color: var(--income);
+}
+
+.transaction-form-wrapper {
+  padding: 16px 32px;
+  background-color: rgb(240, 235, 235);
+  text-align: center;
+}
+
+.transaction-form-wrapper select {
+  width: 180px;
+  margin: auto 10px;
+  padding: 10px;
+  border-radius: 4px;
+  transition: all 0.2s linear;
+  border: 1px solid grey;
+}
+
+.transaction-form-wrapper select:focus,
+input:focus {
+  outline: none;
+}
+
+.transaction-form-wrapper input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  display: none;
+}
+
+.transaction-form-wrapper input[type="text"] {
+  margin: auto 10px;
+  padding: 11px;
+  width: 300px;
+  border-radius: 4px;
+  transition: all 0.2s linear;
+  border: 1px solid grey;
+}
+.transaction-form-wrapper input[type="number"] {
+  margin: auto 10px;
+  padding: 11px;
+  width: 100px;
+  border-radius: 4px;
+  transition: all 0.2s linear;
+  border: 1px solid grey;
+}
+
+.transaction-form-wrapper button {
+  background-color: gray;
+  border: none;
+  color: white;
+  padding: 11px 48px;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.transactions-wrapper {
+  display: flex;
+  padding: 16px 32px;
+}
+
+.transactions-wrapper > div {
+  flex: 1;
+}
+.transactions-wrapper > div > h2 {
+  font-size: 32px;
+  text-align: center;
+}
+
+.transactions-wrapper > div.expense > h2 {
+  color: var(--expense);
+}
+
+.transactions-wrapper > div.income > h2 {
+  color: var(--income);
+}
+.transactions-wrapper > div > div {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+}
+
+.transactions-wrapper > div > div > div {
+  border-top: 1px solid rgb(193, 184, 184);
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.transactions-wrapper > div > div > div > strong {
+  font-size: 18px;
+  color: grey;
+}
+.transactions-wrapper > div > div > div > div > span {
+  letter-spacing: 1.2px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.transactions-wrapper > div.expense > div span {
+  color: var(--expense);
+}
+.transactions-wrapper > div.income > div span {
+  color: var(--income);
+}
+
+.transactions-wrapper > div > div button {
+  margin-left: 16px;
+  color: white;
+  border: none;
+  padding: 2px 8px;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.transactions-wrapper > div.expense button {
+  background: var(--expense);
+}
+
+.transactions-wrapper > div.income button {
+  background: var(--income);
+}
